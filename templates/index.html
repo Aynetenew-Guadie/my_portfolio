@@ -1,204 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aynetenew Guadie - ERP & Full-Stack Developer</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-  <style>
-    @keyframes marquee {
-        0% { transform: translateX(0%); }
-        100% { transform: translateX(-50%); }
-    }
-    .animate-marquee {
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aynetenew Guadie - ERP & Full-Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <style>
+      @keyframes marquee {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      .animate-marquee {
         display: flex;
         width: 200%;
         animation: marquee 20s linear infinite;
-    }
-    .animate-marquee:hover {
+      }
+      .animate-marquee:hover {
         animation-play-state: paused;
-    }
-</style>
-</head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-white">
-
-  <!-- Header -->
-  <nav class="fixed top-0 w-full bg-slate-900/80 backdrop-blur-md border-b border-slate-800 z-50 px-6 py-4 flex justify-between items-center">
-    <a href="#" class="text-xl font-bold tracking-wider text-cyan-400">Aynete<span class="text-slate-100">.DEV</span></a>
-    <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
-      <a href="#about" class="hover:text-cyan-400 transition">About</a>
-      <a href="#skills" class="hover:text-cyan-400 transition">Skills</a>
-      <a href="#projects" class="hover:text-cyan-400 transition">Projects</a>
-      <a href="#contact" class="hover:text-cyan-400 transition">Contact</a>
-    </div>
-    <a href="{{ url_for('download_cv') }}" class="px-4 py-2 text-sm bg-cyan-600 hover:bg-cyan-500 font-semibold rounded-lg shadow-lg shadow-cyan-600/30 transition flex items-center gap-2">
-      <i class="fa-solid fa-file-arrow-down"></i> Download CV
-    </a>
-  </nav>
-
-  <!-- Hero Section -->
-        <section id="about" class="pt-8 flex flex-col md:flex-row items-center justify-between gap-12">
-            
-            <!--  Profile Image + Marquee Text -->
-            <div class="flex flex-col items-center md:items-start space-y-6 w-full md:w-auto">
-                <!-- Profile Photo -->
-                <div class="relative group">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-300"></div>
-                    <img src="/static/profile.jpg" alt="Aynetenew Guadie" class="relative w-48 h-48 md:w-64 md:h-64 object-cover rounded-2xl border-2 border-slate-800 shadow-2xl">
-                </div>
-
-                <!-- Marquee Text Banner  -->
-                <div class="w-full max-w-xs md:max-w-sm overflow-hidden bg-slate-900/80 border border-slate-800 rounded-lg py-2">
-                    <div class="animate-marquee flex space-x-6 whitespace-nowrap text-cyan-400 font-semibold text-xs tracking-wider uppercase">
-                        <span>⚡ Odoo ERP Specialist</span>
-                        <span>•</span>
-                        <span>💻 PostgreSQL & DB Architecture</span>
-                        <span>•</span>
-                        <span>🌐 Python & Flask</span>
-                        <span>•</span>
-                        <span>⚡ Odoo ERP Specialist</span>
-                        <span>•</span>
-                        <span>💻 PostgreSQL & DB Architecture</span>
-                        <span>•</span>
-                        <span>🌐 Python & Flask</span>
-                    </div>
-                </div>
-            </div>
-
-            <!--  Developer Intro Details -->
-            <div class="flex-1 space-y-6">
-                <span class="px-3 py-1 text-xs font-semibold tracking-wider text-cyan-400 bg-cyan-950 border border-cyan-800 rounded-full">ERP & Enterprise Systems Specialist</span>
-                      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-tight">
-                         <span class="text-slate-200">Hi, I'm</span><br class="hidden sm:inline" />
-                          <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Aynetenew Guadie</span>
-                      </h1>                <p class="text-slate-400 text-lg leading-relaxed">
-                    Computer Science graduate & software developer specializing in custom Odoo 17 ERP modules, full-stack enterprise solutions, and backend database architecture.
-                </p>
-                <div class="flex flex-wrap gap-4 pt-2">
-                    <a href="#contact" class="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold rounded-lg transition">Get in Touch</a>
-                    <a href="/static/resume.pdf" download class="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold rounded-lg shadow-lg shadow-cyan-500/20 transition flex items-center gap-2">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-                        Get Resume
-                    </a>
-                </div>
-            </div>
-
-        </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="py-20 px-6 max-w-6xl mx-auto border-t border-slate-800/80">
-    <h2 class="text-3xl font-bold mb-12 text-center">Core Technical Expertise</h2>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl">
-        <i class="fa-solid fa-gears text-cyan-400 text-3xl mb-4"></i>
-        <h3 class="font-bold text-lg mb-2">ERP & Odoo 17</h3>
-        <p class="text-slate-400 text-sm">Custom ORM modules, QWeb reporting, approval workflows, security access rules.</p>
+      }
+    </style>
+  </head>
+  <body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-white">
+    <!-- Header -->
+    <nav class="fixed top-0 w-full bg-slate-900/80 backdrop-blur-md border-b border-slate-800 z-50 px-6 py-4 flex justify-between items-center">
+      <a href="#" class="text-xl font-bold tracking-wider text-cyan-400">Aynete<span class="text-slate-100">.DEV</span></a>
+      <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-cyan-400 transition">About</a>
+        <a href="#skills" class="hover:text-cyan-400 transition">Skills</a>
+        <a href="#projects" class="hover:text-cyan-400 transition">Projects</a>
+        <a href="#contact" class="hover:text-cyan-400 transition">Contact</a>
       </div>
-      <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl">
-        <i class="fa-brands fa-python text-cyan-400 text-3xl mb-4"></i>
-        <h3 class="font-bold text-lg mb-2">Backend Development</h3>
-        <p class="text-slate-400 text-sm">Python business logic, REST APIs, PostgreSQL database design and administration.</p>
-      </div>
-      <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl">
-        <i class="fa-brands fa-docker text-cyan-400 text-3xl mb-4"></i>
-        <h3 class="font-bold text-lg mb-2">DevOps & Tools</h3>
-        <p class="text-slate-400 text-sm">Docker Compose containerization, Git version control.</p>
-      </div>
-      <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl">
-        <i class="fa-solid fa-code text-cyan-400 text-3xl mb-4"></i>
-        <h3 class="font-bold text-lg mb-2">Frontend Stack</h3>
-        <p class="text-slate-400 text-sm">HTML5, CSS3, JavaScript, XML view inheritance, and modern UI frameworks.</p>
-      </div>
-    </div>
-  </section>
+      <a href="{{ url_for('download_cv') }}" class="px-4 py-2 text-sm bg-cyan-600 hover:bg-cyan-500 font-semibold rounded-lg shadow-lg shadow-cyan-600/30 transition flex items-center gap-2"><i class="fa-solid fa-file-arrow-down"></i> Download CV</a>
+    </nav>
 
-  <!-- Projects Section -->
-  <section id="projects" class="py-20 px-6 max-w-6xl mx-auto border-t border-slate-800/80">
-    <h2 class="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
-    <div class="grid md:grid-cols-2 gap-8">
-      <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl space-y-4">
-        <h3 class="text-xl font-bold text-cyan-400">Share Management Module</h3>
-        <p class="text-slate-400 text-sm">Odoo custom module designed for managing equity shares, dividends, and multi-stage shareholder approval workflows.</p>
-        <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-300">
-          <span class="px-2 py-1 bg-slate-800 rounded">Odoo 17</span>
-          <span class="px-2 py-1 bg-slate-800 rounded">Python</span>
-          <span class="px-2 py-1 bg-slate-800 rounded">PostgreSQL</span>
+    <!-- Hero Section -->
+    <section id="about" class="pt-8 flex flex-col md:flex-row items-center justify-between gap-12">
+      <!-- Profile Image + Marquee Text -->
+      <div class="flex flex-col items-center md:items-start space-y-6 w-full md:w-auto">
+        <!-- Profile Photo -->
+        <div class="relative group">
+          <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-300"></div>
+          <img src="/static/profile.jpg" alt="Aynetenew Guadie" class="relative w-48 h-48 md:w-64 md:h-64 object-cover rounded-2xl border-2 border-slate-800 shadow-2xl" />
+        </div>
+
+        <!-- Marquee Text Banner -->
+        <div class="w-full max-w-xs md:max-w-sm overflow-hidden bg-slate-900/80 border border-slate-800 rounded-lg py-2">
+          <div class="animate-marquee flex space-x-6 whitespace-nowrap text-cyan-400 font-semibold text-xs tracking-wider uppercase">
+            <span>⚡ Odoo ERP Specialist</span>
+            <span>•</span>
+            <span>💻 PostgreSQL & DB Architecture</span>
+            <span>•</span>
+            <span>🌐 Python & Flask</span>
+            <span>•</span>
+            <span>⚡ Odoo ERP Specialist</span>
+            <span>•</span>
+            <span>💻 PostgreSQL & DB Architecture</span>
+            <span>•</span>
+            <span>🌐 Python & Flask</span>
+          </div>
         </div>
       </div>
-      <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl space-y-4">
-        <h3 class="text-xl font-bold text-cyan-400">Library & Document System</h3>
-        <p class="text-slate-400 text-sm">Enterprise asset tracking system with fine-grained access control lists, automated borrowing limits, and dynamic reports.</p>
-        <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-300">
-          <span class="px-2 py-1 bg-slate-800 rounded">Python</span>
-          <span class="px-2 py-1 bg-slate-800 rounded">XML Views</span>
-          <span class="px-2 py-1 bg-slate-800 rounded">QWeb</span>
+
+      <!-- Developer Intro Details -->
+      <div class="flex-1 space-y-6">
+        <span class="px-3 py-1 text-xs font-semibold tracking-wider text-cyan-400 bg-cyan-950 border border-cyan-800 rounded-full">ERP & Enterprise Systems Specialist</span>
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-tight">
+          <span class="text-slate-200">Hi, I'm</span><br class="hidden sm:inline" />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Aynetenew Guadie</span>
+        </h1>
+        <p class="text-slate-400 text-lg leading-relaxed">Computer Science graduate & software developer specializing in custom Odoo 17 ERP modules, full-stack enterprise solutions, and backend database architecture.</p>
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="#contact" class="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold rounded-lg transition">Get in Touch</a>
+          <a href="/static/resume.pdf" download class="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold rounded-lg shadow-lg shadow-cyan-500/20 transition flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>Get Resume
+          </a>
         </div>
       </div>
-    </div>
-    <!-- Contact Section -->
-    <section id="contact" class="space-y-8 pt-6">
-            <div>
-                <h2 class="text-4xl font-extrabold text-white tracking-tight">Get in touch</h2>
-                <div class="w-16 h-1 bg-cyan-400 rounded-full mt-3"></div>
-                <p class="text-slate-400 text-sm sm:text-base mt-4">
-                    Have a project or a job opening? Send me a message.
-                </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6 max-w-6xl mx-auto border-t border-slate-800/80">
+      <h2 class="text-3xl font-bold mb-12 text-center">Core Technical Expertise</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl">
+          <i class="fa-solid fa-gears text-cyan-400 text-3xl mb-4"></i>
+          <h3 class="font-bold text-lg mb-2">ERP & Odoo 17</h3>
+          <p class="text-slate-400 text-sm">Custom ORM modules, QWeb reporting, approval workflows, security access rules.</p>
+        </div>
+        <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl">
+          <i class="fa-brands fa-python text-cyan-400 text-3xl mb-4"></i>
+          <h3 class="font-bold text-lg mb-2">Backend Development</h3>
+          <p class="text-slate-400 text-sm">Python business logic, REST APIs, PostgreSQL database design and administration.</p>
+        </div>
+        <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl">
+          <i class="fa-brands fa-docker text-cyan-400 text-3xl mb-4"></i>
+          <h3 class="font-bold text-lg mb-2">DevOps & Tools</h3>
+          <p class="text-slate-400 text-sm">Docker Compose containerization, Git version control.</p>
+        </div>
+        <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl">
+          <i class="fa-solid fa-code text-cyan-400 text-3xl mb-4"></i>
+          <h3 class="font-bold text-lg mb-2">Frontend Stack</h3>
+          <p class="text-slate-400 text-sm">HTML5, CSS3, JavaScript, XML view inheritance, and modern UI frameworks.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 max-w-6xl mx-auto border-t border-slate-800/80">
+      <h2 class="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl space-y-4">
+          <h3 class="text-xl font-bold text-cyan-400">Share Management Module</h3>
+          <p class="text-slate-400 text-sm">Odoo custom module designed for managing equity shares, dividends, and multi-stage shareholder approval workflows.</p>
+          <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-300">
+            <span class="px-2 py-1 bg-slate-800 rounded">Odoo 17</span>
+            <span class="px-2 py-1 bg-slate-800 rounded">Python</span>
+            <span class="px-2 py-1 bg-slate-800 rounded">PostgreSQL</span>
+          </div>
+        </div>
+        <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl space-y-4">
+          <h3 class="text-xl font-bold text-cyan-400">Library & Document System</h3>
+          <p class="text-slate-400 text-sm">Enterprise asset tracking system with fine-grained access control lists, automated borrowing limits, and dynamic reports.</p>
+          <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-300">
+            <span class="px-2 py-1 bg-slate-800 rounded">Python</span>
+            <span class="px-2 py-1 bg-slate-800 rounded">XML Views</span>
+            <span class="px-2 py-1 bg-slate-800 rounded">QWeb</span>
+          </div>
+        </div>
+      </div>
+      <!-- Contact Section -->
+      <section id="contact" class="space-y-8 pt-6">
+        <div>
+          <h2 class="text-4xl font-extrabold text-white tracking-tight">Get in touch</h2>
+          <div class="w-16 h-1 bg-cyan-400 rounded-full mt-3"></div>
+          <p class="text-slate-400 text-sm sm:text-base mt-4">Have a project or a job opening? Send me a message.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+          <!-- Left: Contact Details -->
+          <div class="md:col-span-5 space-y-5 text-sm">
+            <div class="flex items-center space-x-3 text-cyan-400">
+              <span class="p-2 bg-slate-900 border border-slate-800 rounded-lg">📧</span>
+              <a href="mailto:aynetenew1921@gmail.com" class="hover:underline text-slate-300 hover:text-cyan-400 transition-colors">aynetenew1921@gmail.com</a>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
-                <!-- Left: Contact Details -->
-                <div class="md:col-span-5 space-y-5 text-sm">
-                    <div class="flex items-center space-x-3 text-cyan-400">
-                        <span class="p-2 bg-slate-900 border border-slate-800 rounded-lg">📧</span>
-                        <a href="mailto:aynetenew1921@gmail.com" class="hover:underline text-slate-300 hover:text-cyan-400 transition-colors">aynetenew1921@gmail.com</a>
-                    </div>
-                    <div class="flex items-center space-x-3 text-cyan-400">
-                        <span class="p-2 bg-slate-900 border border-slate-800 rounded-lg">📞</span>
-                        <span class="text-slate-300">+251 918 604 039 / +251 938 260 153</span>
-                    </div>
-                    <div class="flex items-center space-x-3 text-cyan-400">
-                        <span class="p-2 bg-slate-900 border border-slate-800 rounded-lg">📍</span>
-                        <span class="text-slate-300">Addis Ababa, Ethiopia</span>
-                    </div>
-                    <div class="flex items-center space-x-3 text-cyan-400">
-                        <span class="p-2 bg-slate-900 border border-slate-800 rounded-lg">💻</span>
-                        <a href="https://github.com/Aynetenew-Guadie" target="_blank" class="hover:underline text-cyan-400">github.com/Aynetenew-Guadie</a>
-                    </div>
-                </div>
-
-                <!-- Right: Contact Form -->
-                <div class="md:col-span-7">
-                    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-                        <!-- Replace value with your copied key from Web3Forms -->
-                        <input type="hidden" name="access_key" value="04b19f78-3ef0-4b1a-98de-772ec70912f8">
-
-                        <div>
-                            <input type="text" name="name" placeholder="Your name" class="w-full px-4 py-3 bg-slate-900/90 border border-slate-800/90 rounded-lg text-slate-200 placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-colors text-sm" required>
-                        </div>
-                        <div>
-                            <input type="text" name="phone" placeholder="Your phone number" class="w-full px-4 py-3 bg-slate-900/90 border border-slate-800/90 rounded-lg text-slate-200 placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-colors text-sm" required>
-                        </div>
-                        <div>
-                            <input type="email" name="email" placeholder="Your email" class="w-full px-4 py-3 bg-slate-900/90 border border-slate-800/90 rounded-lg text-slate-200 placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-colors text-sm" required>
-                        </div>
-                        <div>
-                            <textarea name="message" rows="5" placeholder="Message" class="w-full px-4 py-3 bg-slate-900/90 border border-slate-800/90 rounded-lg text-slate-200 placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-colors text-sm resize-none" required></textarea>
-                        </div>
-                        <button type="submit" class="w-full py-3 bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-slate-950 font-bold rounded-lg shadow-lg shadow-cyan-500/20 transition-all text-sm">
-                            Send message
-                        </button>
-                    </form>
-                </div>
+            <div class="flex items-center space-x-3 text-cyan-400">
+              <span class="p-2 bg-slate-900 border border-slate-800 rounded-lg">📞</span>
+              <div class="text-slate-300 space-x-1">
+                <a href="tel:+251918604039" class="hover:underline hover:text-cyan-400 transition-colors">+251 918 604 039</a>
+                <span>/</span>
+                <a href="tel:+251938260153" class="hover:underline hover:text-cyan-400 transition-colors">+251 938 260 153</a>
+              </div>
             </div>
-        </section>
-  </section>
+            <div class="flex items-center space-x-3 text-pink-400">
+              <span class="p-2 bg-slate-900 border border-slate-800 rounded-lg">📍</span>
+              <span class="text-slate-300">Addis Ababa, Ethiopia</span>
+            </div>
+            <div class="flex items-center space-x-3 text-cyan-400">
+              <span class="p-2 bg-slate-900 border border-slate-800 rounded-lg">💻</span>
+              <a href="https://github.com/Aynetenew-Guadie" target="_blank" class="hover:underline text-cyan-400">github.com/Aynetenew-Guadie</a>
+            </div>
+          </div>
 
-  <!-- Footer -->
-  <footer id="contact" class="py-12 border-t border-slate-800 text-center text-slate-500 text-sm">
-    <p>© 2026 Aynetenew Guadie.All rights reserved. Built with Flask & Tailwind CSS.</p>
-  </footer>
+          <!-- Right: Contact Form -->
+          <div class="md:col-span-7">
+            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+              <!-- Replace value with your copied key from Web3Forms -->
+              <input type="hidden" name="access_key" value="04b19f78-3ef0-4b1a-98de-772ec70912f8" />
 
-</body>
+              <div>
+                <input type="text" name="name" placeholder="Your name" class="w-full px-4 py-3 bg-slate-900/90 border border-slate-800/90 rounded-lg text-slate-200 placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-colors text-sm" required />
+              </div>
+              <div>
+                <input type="text" name="phone" placeholder="Your phone number" class="w-full px-4 py-3 bg-slate-900/90 border border-slate-800/90 rounded-lg text-slate-200 placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-colors text-sm" required />
+              </div>
+              <div>
+                <input type="email" name="email" placeholder="Your email" class="w-full px-4 py-3 bg-slate-900/90 border border-slate-800/90 rounded-lg text-slate-200 placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-colors text-sm" required />
+              </div>
+              <div>
+                <textarea name="message" rows="5" placeholder="Message" class="w-full px-4 py-3 bg-slate-900/90 border border-slate-800/90 rounded-lg text-slate-200 placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-colors text-sm resize-none" required></textarea>
+              </div>
+              <button type="submit" class="w-full py-3 bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-slate-950 font-bold rounded-lg shadow-lg shadow-cyan-500/20 transition-all text-sm">Send message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="py-12 border-t border-slate-800 text-center text-slate-500 text-sm">
+      <p>© 2026 Aynetenew Guadie.All rights reserved. Built with Flask & Tailwind CSS.</p>
+    </footer>
+  </body>
 </html>
